@@ -9,8 +9,8 @@ router.use('/api', apiRoutes);
 
 // Error message
 router.use((req, res) => {
-    return res.send('Wrong route!');
-  });
+  res.status(404).send('Wrong route!');
+});
 
 // Module exports router
 module.exports = router;
