@@ -1,30 +1,30 @@
-const connection = require('../config/connection');
-const { Users } = require('../models');
-const getRandomName = require('./data');
+// const connection = require('../config/connection');
+// const { Users } = require('../models');
+// const getRandomName = require('./data');
 
-console.log(getRandomName());
-connection.on('error', (err) => err);
+// console.log(getRandomName());
+// connection.on('error', (err) => err);
 
-connection.once('open', async () => {
-  console.log('connected');
- // await Post.deleteMany({});
-  await User.deleteMany({});
+// connection.once('open', async () => {
+//   console.log('connected');
+//  // await Post.deleteMany({});
+//   await Users.deleteMany({});
 
-  const users = [];
+//   const Users = [];
 
-  for (let i = 0; i < 20; i++) {
-    const fullName = getRandomName();
-    const first = fullName.split(' ')[0];
-    const last = fullName.split(' ')[1];
+//   for (let i = 0; i < 20; i++) {
+//     const fullName = getRandomName();
+//     const first = fullName.split(' ')[0];
+//     const last = fullName.split(' ')[1];
 
-    users.push({
-      first,
-      last,
-      age: Math.floor(Math.random() * (99 - 18 + 1) + 18),
-    });
-  }
+//     Users.push({
+//       first,
+//       last,
+//       age: Math.floor(Math.random() * (99 - 18 + 1) + 18),
+//     });
+//   }
 
-  await Users.collection.insertMany(users);
-  console.log(users);
-  process.exit(0);
-});
+//   await Users.collection.insertMany(Users);
+//   console.log(Users);
+//   process.exit(0);
+// });

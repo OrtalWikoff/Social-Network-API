@@ -1,4 +1,4 @@
-//  Mongoose
+// Require Mongoose
 const { Schema, model } = require('mongoose');
 
 const UsersSchema = new Schema(
@@ -13,7 +13,7 @@ const UsersSchema = new Schema(
         type: String,
         required: true,
         unique: true,
-        // using REGEX to validate 
+        // use REGEX to validate correct email
         match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/]
     },
     thoughts: [{
