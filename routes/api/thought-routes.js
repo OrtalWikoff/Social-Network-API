@@ -13,19 +13,19 @@ const {
 
 } = require('../../controllers/thoughts-controller');
 
-// -- Directs to: /api/thoughts <GET>
+// -- Directs to: /api/Thoughts <GET>
 router.route('/').get(getAllThoughts);
 
-// -- Directs to: /api/thoughts/:id <GET, PUT, DELETE>
+// -- Directs to: /api/Thoughts/:id <GET, PUT, DELETE>
 router.route('/:id').get(getThoughtsById).put(updateThoughts).delete(deleteThoughts); 
 
-// -- Directs to: /api/thoughts/:userId <POST>
+// -- Directs to: /api/Thoughts/:userId <POST>
 router.route('/:userId').post(createThoughts);
 
-// -- Directs to: /api/thoughts/:thoughtId/reactions <POST>
+// -- Directs to: /api/Thoughts/:thoughtId/reactions <POST>
 router.route('/:thoughtId/reactions').post(addReaction);
 
-// -- Directs to: /api/thoughts/:thoughtId/reactionId <DELETE>
+// -- Directs to: /api/Thoughts/:thoughtId/reactionId <DELETE>
 router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction);
 
 // Export module router
