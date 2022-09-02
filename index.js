@@ -1,7 +1,9 @@
 // Require express and mongoose
 const express = require('express');
 // const mongodb = require('mongodb').MongoClient;
-const db = require('./config/connection');
+//const db = require('./config/connection');
+
+const mongoose = require('mongoose');
 
 
 const app = express();
@@ -14,13 +16,13 @@ app.use(express.static('public'));
 
 app.use(require('./routes'));
 
-// // Connect mongoose
-// mongodb.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/social-network-api', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// });
+// Connect mongoose
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/social-network-api', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 // Log mongoose queries
-//mongoose.set('debug', true);
+mongoose.set('debug', true);
 
-app.listen(PORT, () => console.log(` ************** Connected on localhost:${PORT} ************* `));
+app.listen(PORT, () => console.log(`Connected on localhost:${PORT}`));
