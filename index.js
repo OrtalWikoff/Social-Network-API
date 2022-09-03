@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/social-ne
   useUnifiedTopology: true
 });
 
-// Log mongoose queries
+// Log mongoose queries: log all the queries that mongoose fire during the whole application
 mongoose.set('debug', true);
 
 app.listen(PORT, () => console.log(`Connected on localhost:${PORT}`));
