@@ -5,6 +5,8 @@ In addition to using the Express.js and Mongoose packages, I used JavaScript dat
 
 Here is the link to walkthrough video that demonstrate the functionality of the application:
 
+https://watch.screencastify.com/v/NomaSAO1wAn1zRvm9CeM
+
 Here is a screenshot of the application:
 
 <img width="600" alt="Screen Shot 2022-09-02 at 9 18 38 AM" src="https://user-images.githubusercontent.com/100814403/188157878-587b07fe-d82d-47ad-bac6-e0c95d99044b.png">
